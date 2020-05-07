@@ -1,0 +1,8 @@
+Primeiors passo PHP
+
+apos instalacao ir no diretorio 
+php.ini-development
+para php.ini
+
+cli do php
+php - a
