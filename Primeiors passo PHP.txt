@@ -6,3 +6,8 @@ para php.ini
 
 cli do php
 php - a
+
+Subindo um servidor PHP
+entrar na pasta 
+
+php -S localhost:8080
