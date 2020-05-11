@@ -11,3 +11,31 @@ Subindo um servidor PHP
 entrar na pasta 
 
 php -S localhost:8080
+
+
+funcao no terminal
+
+php > require 'src/conta.php';
+php > $conta = criarconta('123.456.789.10','Vinicius',500);
+php > var_dump($conta);
+array(1) {
+  ["123.456.789.10"]=>
+  array(2) {
+    ["titular"]=>
+    string(8) "Vinicius"
+    ["saldo"]=>
+    float(500)
+  }
+}
+
+
+class
+
+php > require 'src/Conta.php';
+php > $primeiraConta = new Conta();
+php > $primeiraConta->saldo=200;
+php > var_dump($primeiraConta);
+php > echo $segundaConta -> saldo;
+
+funca class
+$umaconta->sacar(150);
