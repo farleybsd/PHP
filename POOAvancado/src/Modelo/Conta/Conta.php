@@ -2,17 +2,19 @@
 
 namespace Alura\Banco\Modelo\Conta;
 
-class Conta
+// classe abstrata ainda nao esta completa ela e um modelo para as classes filhas a completará
+//Não pode ser instanciada, pois ainda não está completa (não é concreta)
+abstract class Conta
 {
     private $titular;
-    private $saldo;
+    protected $saldo;
     private static $numeroDeContas = 0;
+
 
     public function __construct(Titular $titular)
     {
         $this->titular = $titular;
         $this->saldo = 0;
-
         self::$numeroDeContas++;
     }
 
@@ -21,9 +23,16 @@ class Conta
         self::$numeroDeContas--;
     }
 
+    //garantir que todas as classes filhas terao que implementar mais com suas regras diferentes em casa classe filha
+    abstract protected function percentualTarifa(): float;
+
+
     public function saca(float $valorASacar): void
     {
-        $tarifaSaque = $valorASacar * 0.05;
+
+        $tarifaSaque = $valorASacar * $this->percentualTarifa();
+
+
         $valorSaque = $valorASacar + $tarifaSaque;
         if ($valorASacar > $this->saldo) {
             echo "Saldo indisponível";
@@ -43,16 +52,7 @@ class Conta
         $this->saldo += $valorADepositar;
     }
 
-    public function transfere(float $valorATransferir, Conta $contaDestino): void
-    {
-        if ($valorATransferir > $this->saldo) {
-            echo "Saldo indisponível";
-            return;
-        }
 
-        $this->sacar($valorATransferir);
-        $contaDestino->depositar($valorATransferir);
-    }
 
     public function recuperaSaldo(): float
     {
