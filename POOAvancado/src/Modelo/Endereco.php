@@ -2,9 +2,11 @@
 
 namespace Alura\Banco\Modelo;
 
-
-class Endereco
+// final nao pode extender a class
+final class Endereco
 {
+    use AcessoPropiedades; // Trait
+
     private string $cidade;
     private string $bairro;
     private string $rua;
@@ -36,5 +38,10 @@ class Endereco
     public function recuperanumero(): string
     {
         return $this->numero;
+    }
+
+    public function __toString(): string
+    {
+        return "{$this->rua},{$this->numero},{$this->bairro},{$this->cidade}";
     }
 }

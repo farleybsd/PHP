@@ -2,8 +2,8 @@
 
 namespace Alura\Banco\Modelo;
 
-
-class CPF
+// final nao pode extender a class
+final class CPF
 {
     private $numero;
 
