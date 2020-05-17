@@ -1,8 +1,9 @@
 <?php
 
 declare(strict_types=1); // nao fazer cast de conversao automatica
+namespace Alura;
 
-require 'ArrayUtils.php';
+spl_autoload_register();
 
 $correntistas_e_compras = [
     "Giovanni",

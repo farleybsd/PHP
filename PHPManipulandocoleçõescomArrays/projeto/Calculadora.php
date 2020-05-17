@@ -1,4 +1,7 @@
 <?php
+
+namespace Alura;
+
 class Calculadora
 {
     public function calculaMedia(array $notas): ?float // ? para poder retornar null
@@ -19,3 +22,7 @@ class Calculadora
         }
     }
 }
+
+// chamando a classe com name space
+
+//$calculadora = new \Alura\Calculadora();

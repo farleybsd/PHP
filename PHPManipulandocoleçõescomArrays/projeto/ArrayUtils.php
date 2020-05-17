@@ -1,6 +1,7 @@
 <?php
 
 declare(strict_types=1); // nao fazer cast de conversao automatica
+namespace Alura;
 
 class ArrayUtils
 {
