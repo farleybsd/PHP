@@ -3,7 +3,7 @@
 declare(strict_types=1); // nao fazer cast de conversao automatica
 namespace Alura;
 
-spl_autoload_register();
+require "autoload.php";
 
 $correntistas_e_compras = [
     "Giovanni",
