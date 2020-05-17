@@ -1,7 +1,8 @@
 <?php
 
+declare(strict_types=1); // nao fazer cast de conversao automatica
 
-require "ArrayUtils.php";
+require 'ArrayUtils.php';
 
 $correntistas_e_compras = [
     "Giovanni",
@@ -12,14 +13,13 @@ $correntistas_e_compras = [
     "Luísa",
     "12"
 ];
+
 echo "<pre>";
-var_dump($correntistas_e_compras);
-
-
-//chamando metodo estatico
-ArrayUtils::remover("Giovanni", $correntistas_e_compras);
-
-
 
 var_dump($correntistas_e_compras);
+
+ArrayUtils::remover("12", $correntistas_e_compras);
+
+var_dump($correntistas_e_compras);
+
 echo "</pre>";
