@@ -1,5 +1,11 @@
 <?php
 
+namespace Alura;
+
+require "autoload.php";
+
+
+
 $correntistas = [
     'Giovanni',
     'João',
@@ -26,3 +32,21 @@ if (array_key_exists("João", $relacionados)) {
 } else {
     echo "Não foi encontrado";
 }
+
+$arrayassosiativo = [
+
+
+    "Giovanni" => 2500,
+    "João" => 3000,
+    "Maria" => 4400,
+    "Luis" => 1000,
+    "Luisa" => 8700,
+    "Rafael" => 9000,
+];
+
+$maoires = ArrayUtils::encontrarPessoasComSaldoMaior(3000, $relacionados);
+
+echo "<pre>";
+var_dump($maoires);
+
+echo "</pre>";
