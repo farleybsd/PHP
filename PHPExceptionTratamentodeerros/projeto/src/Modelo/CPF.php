@@ -15,6 +15,7 @@ final class CPF
         ]);
 
         if ($numero === false) {
+            // Lancar uma exceção
             echo "Cpf inválido";
             exit();
         }
