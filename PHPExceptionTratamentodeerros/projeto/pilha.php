@@ -13,8 +13,13 @@ function funcao1()
     //$divisao = intdiv(5, 0);
     try {
         funcao2();
-    } catch (RuntimeException $problema) {
+    } catch (RuntimeException  | DivisionByZeroError $problema) {
         echo "Na funcao 1 resolvi o problema na funcao Dois" . PHP_EOL;
+        echo $problema->getMessage() . PHP_EOL;
+        echo $problema->getLine() . PHP_EOL;
+        echo $problema->getTraceAsString() . PHP_EOL;
+    } catch (DivisionByZeroError $erro) {
+        echo "Erro ao Dividir um número por 0" . PHP_EOL;
     }
     echo 'Saindo da função 1' . PHP_EOL;
 }
