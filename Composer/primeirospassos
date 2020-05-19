@@ -41,3 +41,7 @@ composer install --no-dev
 
 //usando cli de pacote quando tem para verficiar o cli
 vendor\bin\phpunit --version
+
+//install code sphinnfer padrao de codificao tipo pettrier do js
+composer require --dev  squizlabs/php_codesniffer
+vendor\bin\phpcs --standard=psr12 src
