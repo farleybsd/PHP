@@ -13,7 +13,9 @@ function funcao1()
     //$divisao = intdiv(5, 0);
     try {
         funcao2();
-    } catch (RuntimeException  | DivisionByZeroError $problema) {
+    } //catch (RuntimeException  | DivisionByZeroError $problema) {
+    //catch (Exception | Error $problema) {
+    catch (Throwable $problema) {
 
         echo "Na funcao 1 resolvi o problema na funcao Dois" . PHP_EOL;
         echo $problema->getMessage() . PHP_EOL;
@@ -22,6 +24,7 @@ function funcao1()
         throw new RuntimeException('Execao tratada da uma olhada ai', $problema->getCode(), $problema);
     } catch (DivisionByZeroError $erro) {
         echo "Erro ao Dividir um número por 0" . PHP_EOL;
+    } catch (Error $erro) {
     }
     echo 'Saindo da função 1' . PHP_EOL;
 }
