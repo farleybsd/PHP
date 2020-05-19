@@ -26,3 +26,5 @@ composer install
 
 // atualizado via composer.json
 composer update
+//crowler pelo cursos
+composer require symfony/css-selector
