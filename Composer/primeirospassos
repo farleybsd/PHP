@@ -31,3 +31,13 @@ composer require symfony/css-selector
 
 //atualizar composer.js quando altera configuracoes
 composer dumpautoload
+
+// teste com php
+composer require --dev phpunit/phpunit
+https://phpunit.de/getting-started/phpunit-8.html 
+
+// Instalando composer na producao
+composer install --no-dev
+
+//usando cli de pacote quando tem para verficiar o cli
+vendor\bin\phpunit --version
