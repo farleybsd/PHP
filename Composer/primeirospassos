@@ -1,0 +1,28 @@
+composer --version
+
+Iniciar as configuracoes do composer 
+ ir ate a pasta do projeto composer init 
+ 
+This command will guide you through creating your composer.json config.
+
+Package name (<vendor>/<name>) [administrador/buscador-cursos-alura]: ENTER
+Description []: Porjeto que busca os cursos no site da Alura
+Author [farleybsd <farley.t.i@hotmail.com>, n to skip]: 
+Minimum Stability []: ENTER
+Package Type (e.g. library, project, metapackage, composer-plugin) []: library 
+License []: ENTER
+Would you like to define your dependencies (require) interactively [yes]?  ENTER
+Would you like to define your dev dependencies (require-dev) interactively [yes]? NO
+Do you confirm generation [yes]? YES
+
+// repositorio do composer
+https://packagist.org/
+
+// Instalando um pacote via composer
+composer require guzzlehttp/guzzle
+
+// Instalando pacote via composer.json
+composer install
+
+// atualizado via composer.json
+composer update
