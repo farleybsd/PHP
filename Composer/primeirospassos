@@ -45,3 +45,7 @@ vendor\bin\phpunit --version
 //install code sphinnfer padrao de codificao tipo pettrier do js
 composer require --dev  squizlabs/php_codesniffer
 vendor\bin\phpcs --standard=psr12 src
+
+// erros do php
+composer require --dev  phan/phan
+vendor\bin\phan --allow-polyfill-parser  src\Buscador.php
