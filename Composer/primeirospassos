@@ -28,3 +28,6 @@ composer install
 composer update
 //crowler pelo cursos
 composer require symfony/css-selector
+
+//atualizar composer.js quando altera configuracoes
+composer dumpautoload
