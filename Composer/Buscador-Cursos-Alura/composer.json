@@ -32,6 +32,7 @@
     "scripts": {
         "cs": "phpcs --standard=psr12 src",
         "phan": "phan --allow-polyfill-parser",
+        "ls": "dir",
         "check": [
             "@phan",
             "@cs"
